@@ -3,126 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Gallery</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        #about-me {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        #about-me h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        #about-me p {
-            font-size: 1rem;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        .profile-pic {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .profile-pic:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Horizontal Gallery */
-        .image-gallery {
-            display: flex;
-            overflow-x: scroll; /* Allows horizontal scrolling */
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .image-gallery img {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <h1>My Personal Gallery</h1>
-    </header>
+    <div id="app">
+        <header>
+            <h1>Welcome to My Personal Website</h1>
+        </header>
 
-    <main id="app">
-        <section id="about-me">
-            <h2>About Me</h2>
-            <p><strong>Name:</strong> Abrech D. Dela Cruz</p>
-            <p><strong>Age:</strong> 20 years old</p>
-            <p><strong>University:</strong> Asia Pacific College</p>
-            <p><strong>Education and Achievements:</strong> Graduated elementary and senior high school and currently a sophomore</p>
-            <p><strong>Goals in Life:</strong> To have a successful career path</p>
+        <main>
+            <section id="about-me">
+                <h2>About Me</h2>
+                <p><strong>Name:</strong> Abrech D. Dela Cruz</p>
+                <p><strong>Age:</strong> 20 years old</p>
+                <p><strong>University:</strong> Asia Pacific College</p>
+                <p><strong>Education and Achievements:</strong> Graduated elementary and senior high school and currently a sophomore</p>
+                <p><strong>Goals in Life:</strong> To have a successful career path</p>
+                <img class="profile-pic" :src="photoUrl" alt="Personal Photo">
+            </section>
 
             <!-- Image Gallery -->
-            <div class="image-gallery">
-                <img :src="photoUrl1" alt="Personal Photo 1">
-                <img :src="photoUrl2" alt="Personal Photo 2">
-                <img :src="photoUrl3" alt="Personal Photo 3">
-                <img :src="photoUrl4" alt="Personal Photo 4">
-                <img :src="photoUrl5" alt="Personal Photo 5">
-            </div>
-        </section>
-    </main>
+            <section id="gallery">
+                <h2>Image Gallery</h2>
+                <div class="image-gallery">
+                    <img :src="photoUrl1" alt="Image 1">
+                    <img :src="photoUrl2" alt="Image 2">
+                    <img :src="photoUrl3" alt="Image 3">
+                    <img :src="photoUrl4" alt="Image 4">
+                    <img :src="photoUrl5" alt="Image 5">
+                </div>
+            </section>
+        </main>
 
-    <footer>
-        <p>Made with Vue.js</p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 Abrech D. Dela Cruz. All rights reserved.</p>
+        </footer>
+    </div>
 
-    <!-- Vue.js Script -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.47/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
         const app = Vue.createApp({
             data() {
                 return {
-                    photoUrl1: "https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/468554804_122125351478537532_1729573155365708659_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG3LO6S-820h7PYVz1oGHXhPeeTt_bakrE955O39tqSsRb5Kp7_5hsf5ahXSibWaNGr_3cppZVVD-cT5sCIi3Tq&_nc_ohc=IJFgXdwPy5kQ7kNvgEsG0qI&_nc_zt=23&_nc_ht=scontent.fmnl33-6.fna&_nc_gid=AX4xz0qbh2Jfqp59dNwcpcZ&oh=00_AYBDcGIRcXsgeT-L8pYlswmre8KLpF74ltDCLKYhmnTldg&oe=678AD3A8",
-                    photoUrl2: "https://scontent.fmnl33-5.fna.fbcdn.net/v/t1.15752-9/472894043_2090124078089466_4271857981026545515_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHAGJ1TKZ8B0UbpcZkJ0Zz2X0TEOZ68MmZfRMQ5nrwyZgAZWmmQ0CpsRqftz9PVvgmDEI0JGZ7pwcJ9qNadKDOc&_nc_ohc=87aQ0sZU4HwQ7kNvgEuuGS1&_nc_zt=23&_nc_ht=scontent.fmnl33-5.fna&oh=03_Q7cD1gEMZVRGrjaGY3pz1d2bI6PgJZqqaU_TtbEwCw8l82dXFg&oe=67AC9B7C",
-                    photoUrl3: "https://scontent.fmnl33-3.fna.fbcdn.net/v/t1.15752-9/462647394_462796763237132_4100218460912103086_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHT7mpMzdROCHKJXgGJqv2IctIluKl4sGVy0iW4qXiwZR83HgIKlAEUorHcZ8JGTinNGpFTZGyxHvKHdnnGoLi0&_nc_ohc=wlSg5JguyGYQ7kNvgE8XCEu&_nc_zt=23&_nc_ht=scontent.fmnl33-3.fna&oh=03_Q7cD1gEzDTdcnaKn9s_-NXrKRxr_dbmsk2jUHBQvBBL3xlppiA&oe=67AC8CA6",
-                    photoUrl4: "https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/464241184_2202198276817482_8757752623888007415_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGZS-pBNuDsEfUPq3wQeqcXImHYGq4ZVtEiYdgarhlW0XOTv8y2tiUrWG3naPn8YvEcMumOIa7gTk7vWD51dj_f&_nc_ohc=I3SKbFFWD58Q7kNvgE_a-ne&_nc_zt=23&_nc_ht=scontent.fmnl33-2.fna&_nc_gid=A5ehKW6xzrV6w0jS5DDy9Ru&oh=00_AYAZ608wMf6kyztI92BIVlYZLXSkpLDFFwN6U9RsCcNKIQ&oe=678ADD79",
-                    photoUrl5: "https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/307505198_1694384784265503_2778036540046190830_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHod5xY_ZrSOVXySzIe9AA7S45pr5XJ8QJLjmmvlcnxAhYp3ViKDZLikVzbWhaRzWZldsEyBGgmuBqOHj_fIulb&_nc_ohc=WbLw0quFEZ4Q7kNvgGtV4iz&_nc_zt=23&_nc_ht=scontent.fmnl33-6.fna&_nc_gid=AIyXtePlu0fqh0p7YOCJCML&oh=00_AYBkGpLpKTlYRVmgcBSLTD0mCEEjf8U636zSG3nCPSYs6w&oe=678AF695"
+                    photoUrl: "https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/468554804_122125351478537532_1729573155365708659_n.jpg",
+                    photoUrl1: "https://scontent.fmnl33-5.fna.fbcdn.net/v/t1.15752-9/472894043_2090124078089466_4271857981026545515_n.jpg",
+                    photoUrl2: "https://scontent.fmnl33-3.fna.fbcdn.net/v/t1.15752-9/462647394_462796763237132_4100218460912103086_n.jpg",
+                    photoUrl3: "https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/464241184_2202198276817482_8757752623888007415_n.jpg",
+                    photoUrl4: "https://scontent.fmnl33-5.fna.fbcdn.net/v/t39.30808-6/461365428_2180308845673092_3141656421882426976_n.jpg",
+                    photoUrl5: "https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/307505198_1694384784265503_2778036540046190830_n.jpg"
                 };
             }
         });
