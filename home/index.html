@@ -20,8 +20,13 @@
                 <p><strong>University:</strong> Asia Pacific College</p>
                 <p><strong>Education and Achievements:</strong> Graduated elementary and senior high school and currently a sophomore</p>
                 <p><strong>Goals in Life:</strong> To have a successful career path</p>
-                <!-- Apply the profile-pic class here -->
-                <img :src="photoUrl" alt="Personal Photo" class="profile-pic">
+                
+                <!-- Add multiple images here -->
+                <img :src="photoUrl1" alt="Personal Photo 1" class="profile-pic">
+                <img :src="photoUrl2" alt="Personal Photo 2" class="profile-pic">
+                <img :src="photoUrl3" alt="Personal Photo 3" class="profile-pic">
+                <img :src="photoUrl4" alt="Personal Photo 4" class="profile-pic">
+                <img :src="photoUrl5" alt="Personal Photo 5" class="profile-pic">
             </section>
         </main>
 
@@ -35,7 +40,12 @@
         const app = Vue.createApp({
             data() {
                 return {
-                    photoUrl: "https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/468554804_122125351478537532_1729573155365708659_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG3LO6S-820h7PYVz1oGHXhPeeTt_bakrE955O39tqSsRb5Kp7_5hsf5ahXSibWaNGr_3cppZVVD-cT5sCIi3Tq&_nc_ohc=IJFgXdwPy5kQ7kNvgEsG0qI&_nc_zt=23&_nc_ht=scontent.fmnl33-6.fna&_nc_gid=AX4xz0qbh2Jfqp59dNwcpcZ&oh=00_AYBDcGIRcXsgeT-L8pYlswmre8KLpF74ltDCLKYhmnTldg&oe=678AD3A8"
+                    // Add the URLs of all your images
+                    photoUrl1: "https://scontent.fmnl33-5.fna.fbcdn.net/v/t1.15752-9/472894043_2090124078089466_4271857981026545515_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHAGJ1TKZ8B0UbpcZkJ0Zz2X0TEOZ68MmZfRMQ5nrwyZgAZWmmQ0CpsRqftz9PVvgmDEI0JGZ7pwcJ9qNadKDOc&_nc_ohc=87aQ0sZU4HwQ7kNvgEuuGS1&_nc_zt=23&_nc_ht=scontent.fmnl33-5.fna&oh=03_Q7cD1gEMZVRGrjaGY3pz1d2bI6PgJZqqaU_TtbEwCw8l82dXFg&oe=67AC9B7C",
+                    photoUrl2: "https://scontent.fmnl33-3.fna.fbcdn.net/v/t1.15752-9/462647394_462796763237132_4100218460912103086_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHT7mpMzdROCHKJXgGJqv2IctIluKl4sGVy0iW4qXiwZR83HgIKlAEUorHcZ8JGTinNGpFTZGyxHvKHdnnGoLi0&_nc_ohc=wlSg5JguyGYQ7kNvgE8XCEu&_nc_zt=23&_nc_ht=scontent.fmnl33-3.fna&oh=03_Q7cD1gEzDTdcnaKn9s_-NXrKRxr_dbmsk2jUHBQvBBL3xlppiA&oe=67AC8CA6",
+                    photoUrl3: "https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/464241184_2202198276817482_8757752623888007415_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGZS-pBNuDsEfUPq3wQeqcXImHYGq4ZVtEiYdgarhlW0XOTv8y2tiUrWG3naPn8YvEcMumOIa7gTk7vWD51dj_f&_nc_ohc=I3SKbFFWD58Q7kNvgE_a-ne&_nc_zt=23&_nc_ht=scontent.fmnl33-2.fna&_nc_gid=A5ehKW6xzrV6w0jS5DDy9Ru&oh=00_AYAZ608wMf6kyztI92BIVlYZLXSkpLDFFwN6U9RsCcNKIQ&oe=678ADD79",
+                    photoUrl4: "https://scontent.fmnl33-5.fna.fbcdn.net/v/t39.30808-6/461365428_2180308845673092_3141656421882426976_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeHAfOId6PmW0S3Rk2C5UoGitfQFDzd73Su19AUPN3vdKyWhcwogslvuusmymimHuDEp2_oNoQRbdb_JuoBR3Ggb&_nc_ohc=LFt7yijiCe4Q7kNvgGbo3rf&_nc_zt=23&_nc_ht=scontent.fmnl33-5.fna&_nc_gid=AQbiXGy1EDyXVEQq8J5YKs7&oh=00_AYBavVMTUPxfZPEnGdR97WJ4Bi9A-Q0sqm4t560pLXR3EA&oe=678AFC10",
+                    photoUrl5: "https://scontent.fmnl33-5.fna.fbcdn.net/v/t39.30808-6/464241184_2202198276817482_8757752623888007415_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGZS-pBNuDsEfUPq3wQeqcXImHYGq4ZVtEiYdgarhlW0XOTv8y2tiUrWG3naPn8YvEcMumOIa7gTk7vWD51dj_f&_nc_ohc=I3SKbFFWD58Q7kNvgE_a-ne&_nc_zt=23&_nc_ht=scontent.fmnl33-2.fna&_nc_gid=A5ehKW6xzrV6w0jS5DDy9Ru&oh=00_AYAZ608wMf6kyztI92BIVlYZLXSkpLDFFwN6U9RsCcNKIQ&oe=678ADD79"
                 };
             }
         });
