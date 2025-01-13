@@ -4,9 +4,9 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #f4f4f4;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -16,64 +16,15 @@ header {
     padding: 1rem;
 }
 
-h1 {
-    margin: 0;
-}
-
 main {
     padding: 20px;
-    flex-grow: 1;
+    flex-grow: 1; /* Ensures content takes remaining space */
 }
 
-#about-me {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#about-me h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-#about-me p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
-
-.profile-pic {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-pic:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Horizontal Gallery */
-.image-gallery {
-    display: flex;
-    overflow-x: scroll; /* Allows horizontal scrolling */
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.image-gallery img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* Footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem;
-    position: relative;
     width: 100%;
 }
