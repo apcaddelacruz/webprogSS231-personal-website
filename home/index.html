@@ -3,44 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website - Abrech D. Dela Cruz</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <h1>Welcome to My Personal Website</h1>
-    </header>
-    
-    <main>
-        <section class="about-me">
-            <h2>About Me</h2>
-            <p><strong>Name:</strong> Abrech D. Dela Cruz</p>
-            <p><strong>Age:</strong> 20 years old</p>
-            <p><strong>University:</strong> Asia Pacific College</p>
-        </section>
+    <div id="app">
+        <header>
+            <h1>Welcome to My Personal Website</h1>
+        </header>
 
-        <section class="education">
-            <h2>Education and Achievements</h2>
-            <p>Graduated elementary and senior high school and currently a sophomore.</p>
-        </section>
+        <main>
+            <section id="about-me">
+                <h2>About Me</h2>
+                <p><strong>Name:</strong> Abrech D. Dela Cruz</p>
+                <p><strong>Age:</strong> 20 years old</p>
+                <p><strong>University:</strong> Asia Pacific College</p>
+                <p><strong>Education and Achievements:</strong> Graduated elementary and senior high school and currently a sophomore</p>
+                <p><strong>Goals in Life:</strong> To have a successful career path</p>
+                <img :src="photoUrl" alt="Personal Photo">
+            </section>
+        </main>
 
-        <section class="goals">
-            <h2>Goals in Life</h2>
-            <p>To have a successful career path.</p>
-        </section>
+        <footer>
+            <p>&copy; 2025 Abrech D. Dela Cruz. All rights reserved.</p>
+        </footer>
+    </div>
 
-        <section class="picture">
-            <h2>My Picture</h2>
-            <img src="./assets/images/profile.jpg" alt="Abrech D. Dela Cruz" class="profile-pic">
-        </section>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    photoUrl: "https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-6/468554804_122125351478537532_1729573155365708659_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG3LO6S-820h7PYVz1oGHXhPeeTt_bakrE955O39tqSsRb5Kp7_5hsf5ahXSibWaNGr_3cppZVVD-cT5sCIi3Tq&_nc_ohc=IJFgXdwPy5kQ7kNvgEsG0qI&_nc_zt=23&_nc_ht=scontent.fmnl33-6.fna&_nc_gid=AX4xz0qbh2Jfqp59dNwcpcZ&oh=00_AYBDcGIRcXsgeT-L8pYlswmre8KLpF74ltDCLKYhmnTldg&oe=678AD3A8"
+                };
+            }
+        });
 
-        <section class="resources-link">
-            <p><a href="./resources/resources.html">Resources Page</a></p>
-        </section>
-    </main>
-    
-    <footer class="footer">
-        <p>&copy; 2025 Abrech D. Dela Cruz. All Rights Reserved.</p>
-    </footer>
+        app.mount("#app");
+    </script>
 </body>
 </html>
